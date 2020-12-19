@@ -1,0 +1,196 @@
+GET   http://localhost:8000/api/secret/5f6bbda0fc6ead243820900e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDA4OTY0MzV9.-ajnvW4iNUbYPBvw3IIGRB1dg-_t756FBCU8FQ5nueA
+Content-Type: application/json
+
+
+###
+GET   http://localhost:8000/api/signout
+Content-Type: application/json
+
+{
+  "name":"Jhon",
+  "email":"paulA@gmail.com",
+  "password":"pppppp9"
+
+}
+###
+POST  http://localhost:8000/api/signup
+Content-Type: application/json
+
+{
+  "name":"Jhon",
+  "email":"leo@gmail.com",
+  "password":"llllll9",
+   "role":"0"
+
+}
+###
+POST  http://localhost:8000/api/signin
+Content-Type: application/json
+
+{
+  "email":"paulA@gmail.com",
+  "password":"pppppp9"
+
+}
+
+###Product Create
+
+  
+POST /api/product/create/5f776add3c69d31e00706ca1
+Host: localhost:8000
+Accept: application/json
+Content-Type: multipart/form-data; boundary=MyBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc3NmFkZDNjNjlkMzFlMDA3MDZjYTEiLCJpYXQiOjE2MDE2NjUxMzV9.refmJS_aQkSjFSQ2SGsToMmtPGsdd2XkjWypJBLjQm4
+
+--MyBoundary
+Content-Disposition: form-data; name="name"
+
+php COM NODE Book
+--MyBoundary
+Content-Disposition: form-data; name="description"
+
+My first book on PHP js
+
+--MyBoundary
+Content-Disposition: form-data; name="price"
+
+20
+--MyBoundary
+Content-Disposition: form-data; name="category"
+
+5f7146cb041e1e2fb4470422
+--MyBoundary
+Content-Disposition: form-data; name="shipping"
+
+false
+--MyBoundary
+Content-Disposition: form-data; name="quantity"
+
+100
+--MyBoundary
+Content-Disposition: form-data; name="photo"; filename="node1.jpg"
+Content-Type: application/octet-stream
+
+< ..\..\ecomimages\note.jpg
+--MyBoundary
+Content-Disposition: form-data; name="sold"
+
+15
+--MyBoundary--
+###PRODUCT READ
+
+GET   http://localhost:8000/api/product/5f7d1096ce68000fa49218ee
+
+###PRODUCT READ
+
+GET   http://localhost:8000/hello
+
+###PRODUCT DELETE
+DELETE http://localhost:8000/api/product/5f713e128f6e1c24d04a6534/5f6bbda0fc6ead243820900e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDEyNDIwNTF9.7H5yFwNg_fhVBn80RQPYqZ3etRsiXxI3Vu6vy_1CwUc
+
+### PRODUCT UPDATE
+
+PUT  /api/product/5f713e128f6e1c24d04a6534/5f6bbda0fc6ead243820900e
+Host: localhost:8000
+Accept: application/json
+Content-Type: multipart/form-data; boundary=MyBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDEyNDIwNTF9.7H5yFwNg_fhVBn80RQPYqZ3etRsiXxI3Vu6vy_1CwUc
+
+--MyBoundary
+Content-Disposition: form-data; name="name"
+
+PHP Book
+
+--MyBoundary
+Content-Disposition: form-data; name="description"
+
+My first book on PHP
+
+--MyBoundary
+Content-Disposition: form-data; name="price"
+
+20
+--MyBoundary
+Content-Disposition: form-data; name="category"
+
+5f7146cb041e1e2fb4470422
+--MyBoundary
+Content-Disposition: form-data; name="shipping"
+
+false
+--MyBoundary
+Content-Disposition: form-data; name="quantity"
+
+100
+--MyBoundary
+Content-Disposition: form-data; name="photo"; filename="node1.jpg"
+Content-Type: application/octet-stream
+
+< ..\..\ecomimages\note.jpg
+--MyBoundary--
+###CATEGORY READ
+
+GET   http://localhost:8000/api/category/5f7146cb041e1e2fb4470422
+###Category CREATE
+POST  http://localhost:8000/api/category/create/5f776add3c69d31e00706ca1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc3NmFkZDNjNjlkMzFlMDA3MDZjYTEiLCJpYXQiOjE2MDI2MzI4Nzl9.7iCaFL6uvuQtrDywPQmsObp_VZtMEPCZWHxxfIvwZ0Y
+
+{
+  "name":"aaa"
+
+}
+###Category UPDATE
+PUT  http://localhost:8000/api/category/5f7146cb041e1e2fb4470422/5f6bbda0fc6ead243820900e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDA4OTc0MDl9.s7A8zYvl1j_C3KFzTfj-qeW8gwmxibH0q99XqNluzOs
+
+{
+  "name":"PHP COM NODE JS"
+
+}
+###Category DELETE
+DELETE   http://localhost:8000/api/category/5f714539041e1e2fb4470420/5f6bbda0fc6ead243820900e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDA4OTc0MDl9.s7A8zYvl1j_C3KFzTfj-qeW8gwmxibH0q99XqNluzOs
+###CATEGORY LIST ALL
+
+GET  http://localhost:8000/api/categories
+
+###PRODUCT LIST ALL
+
+GET  http://localhost:8000/api/products?sortBy=createdAt&order=desc&limit=4
+
+###PRODUCT LIST RELATED
+
+GET  http://localhost:8000/api/products/related/5f71d91cd9c43f1838191a12
+###PRODUCT LIST CATEGORIES
+GET  http://localhost:8000/api/products/categories
+
+###PRODUCT BY SEARCH 
+POST  http://localhost:8000/api/products/by/search
+
+###PRODUCT PHOTO 
+GET  http://localhost:8000/api/product/photo/5f71dd3ac670a33d68e619e0
+###USER READ 
+GET  http://localhost:8000/api/user/5f6bbda0fc6ead243820900e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDEzMDY5NzV9.4wuuNckMi9eEsqYe9SrmkkKw6H9bkGnbHoXw1oq1YZg
+
+###USER UPDATE 
+PUT http://localhost:8000/api/user/5f6bbda0fc6ead243820900e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjZiYmRhMGZjNmVhZDI0MzgyMDkwMGUiLCJpYXQiOjE2MDEzMDY5NzV9.4wuuNckMi9eEsqYe9SrmkkKw6H9bkGnbHoXw1oq1YZg
+
+{
+  "name": "Jhon DOE"
+
+}
+###
+GET   http://localhost:8000/api/dropcategorie
+###
+GET   http://localhost:8000/api/braintree/getToken/5f776add3c69d31e00706ca1 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc3NmFkZDNjNjlkMzFlMDA3MDZjYTEiLCJpYXQiOjE2MDQ1OTgxMDN9.ThFHGiNKXtTKHWCBsu5zKM2EFp-oXbs981G_HsUl2yE
+

@@ -54,13 +54,13 @@ app.use('/api',braintreeRoutes)
 app.use('/api',orderRoutes)
 
 app.get('/', (req, res) => {
-    res.send('Hello to memories API')
+    res.send('Hello to memories AaaaaPI')
 })
 
 
 
 app.get("/hello" , (req, res ) => {
-    res.json('hello world')
+    res.send('hello world')
 });
 
 

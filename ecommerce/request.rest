@@ -13,19 +13,47 @@ Content-Type: application/json
   "password":"pppppp9"
 
 }
+
+###
+GET   http://localhost:8000/hello
+
 ###
 POST  http://localhost:8000/api/signup
 Content-Type: application/json
 
 {
-  "name":"Jhonaa",
-  "email":"leo@gmail.acom",
-  "password":"llllll9",
+  "name":"paulA",
+  "email":"paulA@gmail.com",
+  "password":"pppppp9",
    "role":"0"
 
 }
+
+###
+
+POST  https://bookecommerce.herokuapp.com/api/signup
+Content-Type: application/json
+
+{
+  "name":"paulA",
+  "email":"paulA@gmail.com",
+  "password":"pppppp9",
+   "role":"0"
+
+}
+
 ###
 POST  http://localhost:8000/api/signin
+Content-Type: application/json
+
+{
+  "email":"paulA@gmail.com",
+  "password":"pppppp9"
+
+}
+###
+
+POST https://bookecommerce.herokuapp.com/api/signin
 Content-Type: application/json
 
 {

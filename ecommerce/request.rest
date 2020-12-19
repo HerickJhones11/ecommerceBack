@@ -18,8 +18,8 @@ POST  http://localhost:8000/api/signup
 Content-Type: application/json
 
 {
-  "name":"Jhon",
-  "email":"leo@gmail.com",
+  "name":"Jhonaa",
+  "email":"leo@gmail.acom",
   "password":"llllll9",
    "role":"0"
 
